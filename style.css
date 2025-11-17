@@ -1,0 +1,7 @@
+@font-face {
+    font-family: Loede;
+    src: url(assets/fonts/Airlash\ Raiders.ttf);
+}
+* {
+    font-family: Loede;
+}
