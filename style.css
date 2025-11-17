@@ -10,6 +10,7 @@ body {
   height: fit-content;
   margin: 5em 10% 5em 10%;
   background-color: white;
+  padding: 1em;
 }
 header {
   height: fit-content;
@@ -24,4 +25,16 @@ header {
 }
 hr {
   border-color: crimson;
+}
+.personal-information h2::first-letter {
+  font-style: italic;
+  color: crimson;
+}
+li::marker {
+  content: "☻";
+  font-size: 1.2em;
+}
+.duty li::marker {
+  content: "✪";
+  font-size: 1.2em;
 }
