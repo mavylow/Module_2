@@ -1,7 +1,27 @@
 @font-face {
-    font-family: Loede;
-    src: url(assets/fonts/Airlash\ Raiders.ttf);
+  font-family: Loede;
+  src: url(assets/fonts/Airlash\ Raiders.ttf);
 }
 * {
-    font-family: Loede;
+  font-family: Loede;
+}
+body {
+  box-shadow: 0px 0px 20px lightgray;
+  height: fit-content;
+  margin: 5em 10% 5em 10%;
+  background-color: white;
+}
+header {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+.avatar {
+  height: 250px;
+  width: 250px;
+  border: 0px;
+  border-radius: 50%;
+}
+hr {
+  border-color: crimson;
 }
