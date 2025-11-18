@@ -8,11 +8,11 @@
 }
 html {
   background-color: rgb(255 241 241);
+  padding: 5em 10% 5em 10%;
 }
 body {
   box-shadow: 0px 0px 20px lightgray;
   height: fit-content;
-  margin: 5em 10% 5em 10%;
   background-color: white;
   padding: 3em;
   border: 0px;
@@ -25,17 +25,28 @@ header {
 }
 
 h1 {
+  display: block;
+  width: fit-content;
   font-size: 40px;
   letter-spacing: 0.2em;
-  position: relative;
-  left: 20%;
 }
 h2 {
   font-size: 1.7em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+nav {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+}
+a {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+}
 .avatar {
+  display: block;
   height: 250px;
   width: 250px;
   border: 0px;
@@ -49,6 +60,7 @@ section {
 }
 section > p {
   font-family: "Inter", sans-serif;
+  padding: 0 10px;
 }
 .personal-information h2::first-letter {
   font-style: italic;
