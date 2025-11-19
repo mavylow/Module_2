@@ -9,7 +9,7 @@
       href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/favicon.png" />
+    <link rel="icon" href="assets/img/favicon.png" />
     <title>Table and form markup</title>
   </head>
   <body>
@@ -221,12 +221,16 @@
         <legend>Other information</legend>
         <div><label>Enter date</label><input type="date" required /></div>
         <div>
-          <label>Enter your phone <small>Format +375 44 467 2612</small></label
+          <label for="phone"
+            >Enter your phone <br /><small
+              >Format +375 44 467 2612</small
+            ></label
           ><input
             type="tel"
             pattern="\+375 [0-9]{2} [0-9]{3} [0-9]{4}"
             required
             placeholder="Enter your phone"
+            id="phone"
           />
         </div>
         <div>

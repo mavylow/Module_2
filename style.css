@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Loede;
+  src: url(assets/fonts/Airlash\ Raiders.ttf);
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -73,17 +78,21 @@ textarea {
   min-width: 5em;
 }
 #special > input {
-  cursor: url(assets/car.png), pointer;
+  cursor: url(assets/img/car.png), pointer;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 div {
   display: flex;
   flex-direction: row;
-
   margin: 0.5em;
 }
 label {
   margin: 0.5em;
-  text-align: right;
+  align-content: center;
 }
 .submit-field {
   justify-content: space-between;
@@ -92,8 +101,15 @@ button {
   width: 6em;
   background-color: darkblue;
   color: lightgoldenrodyellow;
+  font-family: "Loede";
+  border-radius: 1em;
 }
 legend {
   font-size: large;
   font-weight: bold;
+  font-family: "Loede";
+}
+button:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
 }
