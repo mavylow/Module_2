@@ -137,7 +137,7 @@
       <fieldset>
         <legend>Personal data</legend>
         <div>
-          <label>Enter your name according to passport</label
+          <label for="name">Enter your name according to passport</label
           ><input
             type="text"
             placeholder="Enter your name"
@@ -145,10 +145,11 @@
             minlength="2"
             required
             name="name"
+            id="name"
           />
         </div>
         <div>
-          <label>Enter your surname according to passport</label
+          <label for="surname">Enter your surname according to passport</label
           ><input
             type="text"
             placeholder="Enter your surname"
@@ -156,10 +157,12 @@
             minlength="2"
             required
             name="surname"
+            id="surname"
           />
         </div>
         <div>
-          <label>Enter your last name according to passport</label
+          <label for="last_name"
+            >Enter your last name according to passport</label
           ><input
             type="text"
             placeholder="Enter your Last name"
@@ -167,10 +170,11 @@
             minlength="2"
             required
             name="last_name"
+            id="last_name"
           />
         </div>
         <div>
-          <label>Enter your passport number</label
+          <label id="passport_number">Enter your passport number</label
           ><input
             type="text"
             pattern="[A-Z]{2}[0-9]{7}"
@@ -178,32 +182,44 @@
             minlength="9"
             required
             name="passport_number"
+            id="passport_number"
           />
         </div>
         <div>
-          <label>Enter your age</label>
+          <label for="age">Enter your age</label>
           <input
             type="number"
             value="42"
             onkeydown="return !['e', 'E', '+', '-'].includes(event.key)"
             placeholder="Enter your age"
+            required
+            id="age"
           />
         </div>
-        <div>
-          <label for="prpolicy">I agree to Privacy Policy</label
-          ><input type="checkbox" id="prpolicy" />
+        <div class="gender">
+          <label for="gender">Gender</label>
+          <div class="radio">
+            <input type="radio" name="gender" id="male" />
+            <label for="male">Male</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="gender" id="female" />
+            <label for="female">Female</label>
+          </div>
         </div>
         <div>
-          <input type="radio" name="sex" id="male" /><label for="male"
-            >Male</label
-          >
-          <input type="radio" name="sex" id="female" />
-          <label for="female">Female</label>
+          <label for="password">Enter password</label>
+          <input
+            type="password"
+            placeholder="Enter password"
+            id="password"
+            required
+          />
         </div>
       </fieldset>
       <fieldset>
-        <legend>Your address</legend>
-        <div><label>Enter date</label><input type="date" /></div>
+        <legend>Other information</legend>
+        <div><label>Enter date</label><input type="date" required /></div>
         <div>
           <label>Enter your phone <small>Format +375 44 467 2612</small></label
           ><input
@@ -221,8 +237,8 @@
       <fieldset>
         <legend>Your preferences in F1</legend>
         <div>
-          <label>Your favorite driver</label>
-          <select>
+          <label for="driver">Your favorite driver</label>
+          <select id="driver" required>
             <option>Lando Norris</option>
             <option>Piastri Oscar</option>
             <option>Russel George</option>
@@ -247,6 +263,38 @@
           ></textarea>
         </div>
       </fieldset>
+      <fieldset id="special">
+        <legend>Special input</legend>
+        <input type="text" placeholder="Just random input" />
+      </fieldset>
+      <div class="submit-field">
+        <div>
+          <label for="prpolicy">I agree to Privacy Policy</label
+          ><input type="checkbox" id="priv-policy" onchange="" />
+        </div>
+
+        <button
+          type="submit"
+          id="submit"
+          disabled
+          formaction="test.php"
+          formmethod="post"
+        >
+          Submit
+        </button>
+      </div>
     </form>
   </body>
+  <script>
+    const btn = document.getElementById("submit");
+    const privPolicy = document.getElementById("priv-policy");
+
+    privPolicy.addEventListener("change", function () {
+      if (this.checked) {
+        btn.removeAttribute("disabled");
+      } else {
+        btn.setAttribute("disabled", "disabled");
+      }
+    });
+  </script>
 </html>

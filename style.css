@@ -64,8 +64,36 @@ input[type="text"]:focus {
   outline-color: blue;
   caret-color: brown;
 }
+select {
+  cursor: context-menu;
+}
 textarea {
   resize: horizontal;
   min-height: 4em;
   min-width: 5em;
+}
+#special > input {
+  cursor: url(assets/car.png), pointer;
+}
+div {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0.5em;
+}
+label {
+  margin: 0.5em;
+  text-align: right;
+}
+.submit-field {
+  justify-content: space-between;
+}
+button {
+  width: 6em;
+  background-color: darkblue;
+  color: lightgoldenrodyellow;
+}
+legend {
+  font-size: large;
+  font-weight: bold;
 }
