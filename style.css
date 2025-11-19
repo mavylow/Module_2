@@ -1,6 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 20px lightgray;
+  height: fit-content;
+  background-color: white;
+  padding: 3em;
+  margin: 2em;
+  border: 0px;
+  border-radius: 2em;
+}
 table {
   border-collapse: collapse;
   border: 2px solid black;
+  width: 600px;
+  height: 400px;
 }
 thead {
   background-color: #aed9ff;
@@ -8,4 +21,37 @@ thead {
 td,
 th {
   border: 1px solid grey;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.scroll-wrapper {
+  width: 600px;
+  height: 400px;
+  overflow: scroll;
+}
+tbody td {
+  max-height: 60px;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+thead th,
+tfoot th {
+  font-style: italic;
+  text-align: center;
+}
+tbody th {
+  writing-mode: sideways-lr;
+  vertical-align: bottom;
+  font-weight: bold;
+}
+tfoot th:first-of-type {
+  writing-mode: sideways-lr;
+  vertical-align: bottom;
+  font-weight: bold;
+}
+tfoot tr:last-child {
+  font-weight: bold;
+  font-style: italic;
 }
