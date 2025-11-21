@@ -2,7 +2,8 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-rows: 50px 1fr 50px;
-  height: 100vh;
+
+  height: fit-content;
   max-width: 1470px;
   padding: 15px;
   margin: 0 auto;
@@ -22,13 +23,39 @@ aside {
   grid-column: 1 / 1;
   background-color: rgb(230, 0, 255);
 }
-.news {
+.cards {
   grid-row: 1 / span 2;
   grid-column: 2 / -1;
   background-color: rgb(255, 0, 72);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(150px, 200px));
+  gap: 10px;
 }
 .page {
   background-color: rgb(255, 0, 72);
+}
+/* .card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  max-height: 200px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+} */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: ghostwhite;
+  padding: 10px;
+  max-height: 200px;
+}
+h3 {
+  align-self: flex-start;
 }
 footer {
   background-color: coral;
@@ -36,21 +63,22 @@ footer {
 @media (max-width: 1024px) {
   main {
     grid-template-columns: none;
-    grid-template-rows: min(100px, 15vw) 1fr 2fr;
+    grid-template-rows: min(100px, 15vw) 2fr 1fr;
     grid-auto-flow: column;
   }
   aside {
     grid-column: 1 / -1;
-    background-color: rgb(230, 0, 255);
   }
-  .news {
+  .cards {
     grid-row: 2 / -2;
-    background-color: rgb(255, 0, 72);
+    grid-template-columns: repeat(3, 1fr);
   }
   .page {
     grid-column: 1 / -1;
-    background-color: rgb(255, 0, 72);
   }
 }
 @media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
