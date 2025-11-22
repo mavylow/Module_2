@@ -47,6 +47,8 @@ main {
   justify-content: center;
 }
 .img-container img {
+  opacity: 0;
+  animation: 2s ease-in-out smooth-appear 2s forwards;
   width: 80%;
   align-self: flex-start;
 }
@@ -138,5 +140,15 @@ main {
   to {
     transform: scale(1) rotate(0deg);
     background: linear-gradient(89deg, #201c29, #5635f69e);
+  }
+}
+
+@keyframes smooth-appear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
