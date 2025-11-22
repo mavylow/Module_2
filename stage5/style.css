@@ -29,6 +29,15 @@ main {
   justify-content: space-between;
   background: linear-gradient(89deg, #201c29, #5635f69e);
 }
+.card:hover {
+  transform: scale(1.1, 1.1) translate(100px, 100px);
+  opacity: 80%;
+  background: linear-gradient(89deg, #201c29, #f635d39e);
+}
+.card:active {
+  transform: rotate(10deg) scale(1.2, 1.2) skewX(10deg);
+}
+
 .img-container {
   position: relative;
   width: 100%;
@@ -97,6 +106,10 @@ main {
   font-weight: 600;
   align-self: flex-end;
 }
+.card:hover button {
+  background-color: #cd71cb;
+}
+
 .price-container p {
   margin: 0;
   text-transform: uppercase;
