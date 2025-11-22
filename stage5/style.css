@@ -19,6 +19,7 @@ main {
   justify-content: center;
 }
 .card {
+  animation: 2s ease-in-out fade-in;
   width: 600px;
   height: 850px;
   box-sizing: border-box;
@@ -30,12 +31,12 @@ main {
   background: linear-gradient(89deg, #201c29, #5635f69e);
 }
 .card:hover {
-  transform: scale(1.1, 1.1) translate(100px, 100px);
+  transform: scale(1.1) translate(100px, 100px);
   opacity: 80%;
   background: linear-gradient(89deg, #201c29, #f635d39e);
 }
 .card:active {
-  transform: rotate(10deg) scale(1.2, 1.2) skewX(10deg);
+  transform: rotate(10deg) scale(1.2) skewX(10deg);
 }
 
 .img-container {
@@ -124,4 +125,18 @@ main {
   flex-direction: column;
   justify-content: space-between;
   color: rgb(62, 62, 62);
+}
+@keyframes fade-in {
+  from {
+    transform: scale(0) rotate(-20deg);
+
+    background: linear-gradient(89deg, #201c29, #f635d39e);
+  }
+  50% {
+    background: linear-gradient(89deg, #201c29, #aa46dc9e);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    background: linear-gradient(89deg, #201c29, #5635f69e);
+  }
 }
