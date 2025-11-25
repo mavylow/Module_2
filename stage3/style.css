@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --avatar-border: rgb(118, 118, 118);
+}
+* {
+  font-family: Roboto;
+}
 body {
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
 }
-* {
-  font-family: Roboto;
-}
+
 header {
   position: sticky;
   display: flex;
@@ -28,17 +32,18 @@ header {
   margin: 1em;
   border-radius: 50%;
   height: 50px;
-  border: 1px solid rgb(118, 118, 118);
+  border: 1px solid var(--avatar-border);
 }
 .avatar-menu {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-
-ul {
+.mobile {
   display: flex;
   flex-direction: row;
+}
+ul {
   font-family: Arial, Helvetica, sans-serif;
   list-style: none;
   margin: 0;
@@ -67,7 +72,7 @@ a {
   width: 50px;
   height: 50px;
 }
-.menu ul {
+.menu .mobile {
   position: absolute;
   right: 0;
   top: 100%;
@@ -81,7 +86,7 @@ a {
   transition: all 0.3s ease-in-out;
   min-width: 200px;
 }
-.menu input:checked ~ ul {
+.menu input:checked ~ .mobile {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
@@ -89,7 +94,7 @@ a {
 .menu input:checked ~ svg {
   transform: rotate(90deg);
 }
-.menu input:checked ~ ul > li {
+.menu input:checked ~ .mobile > li {
   padding: 1em;
   transition: padding 0.2s ease;
 }
@@ -99,7 +104,7 @@ a {
   }
 }
 @media (max-width: 1000px) {
-  nav {
+  .desktop {
     display: none;
   }
 }
