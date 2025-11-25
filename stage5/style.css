@@ -1,3 +1,13 @@
+:root {
+  --base-bg-gradient: linear-gradient(89deg, #201c29, #5635f69e);
+  --hover-bg-gradient: linear-gradient(89deg, #201c29, #f635d39e);
+  --half-bg-gradient: linear-gradient(89deg, #201c29, #aa46dc9e);
+  --base-btn-color: #7768bf;
+  --hover-btn-color: #cd71cb;
+  --card-shadow: rgb(156, 173, 179);
+  --main-text-color: rgb(71, 71, 71);
+  --description-text-color: rgb(114, 114, 114);
+}
 body {
   max-width: 1240px;
   margin: 2em auto;
@@ -23,17 +33,17 @@ main {
   width: 400px;
   height: 566px;
   box-sizing: border-box;
-  box-shadow: 0 0 20px rgb(156, 173, 179);
+  box-shadow: 0 0 20px var(--card-shadow);
   border-radius: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(89deg, #201c29, #5635f69e);
+  background: var(--base-bg-gradient);
 }
 .card:hover {
   transform: scale(1.1) translate(100px, 100px);
   opacity: 80%;
-  background: linear-gradient(89deg, #201c29, #f635d39e);
+  background: var(--hover-bg-gradient);
 }
 .card:active {
   transform: rotate(10deg) scale(1.2) skewX(10deg);
@@ -82,14 +92,14 @@ main {
   margin: 0;
   padding: 0.3em 0;
   font-size: 1.8em;
-  color: rgb(71, 71, 71);
+  color: var(--main-text-color);
 }
 .text-container p {
   margin: 0;
   padding: 0.5em 0;
   font-size: 1.2em;
   width: 90%;
-  color: rgb(114, 114, 114);
+  color: var(--description-text-color);
 }
 .price-container {
   height: fit-content;
@@ -102,7 +112,7 @@ main {
   font-size: 1.5em;
   width: 60%;
   height: 2em;
-  background-color: #7768bf;
+  background-color: var(--base-btn-color);
   border: none;
   color: white;
   border-radius: 0.5em;
@@ -110,7 +120,7 @@ main {
   align-self: flex-end;
 }
 .card:hover button {
-  background-color: #cd71cb;
+  background-color: var(--hover-btn-color);
 }
 
 .price-container p {
@@ -126,20 +136,19 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: rgb(62, 62, 62);
+  color: var(--main-text-color);
 }
 @keyframes fade-in {
   from {
     transform: scale(0) rotate(-20deg);
-
-    background: linear-gradient(89deg, #201c29, #f635d39e);
+    background: var(--hover-bg-gradient);
   }
   50% {
-    background: linear-gradient(89deg, #201c29, #aa46dc9e);
+    background: var(--half-bg-gradient);
   }
   to {
     transform: scale(1) rotate(0deg);
-    background: linear-gradient(89deg, #201c29, #5635f69e);
+    background: var(--base-bg-gradient);
   }
 }
 
