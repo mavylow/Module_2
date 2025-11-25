@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CV" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"
+    />
+    <link rel="icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>CV page markup</title>
+  </head>
+  <body>
+    <header>
+      <a href="https://github.com/mavylow/Module_2">
+        <img src="assets/img/max.jpeg" class="avatar" alt="avatar" />
+      </a>
+      <h1>F1-Racer</h1>
+    </header>
+    <main>
+      <section class="personal-information">
+        <h2>Personal information</h2>
+        <p>
+          Max Verstappen was born on September 30, 1997, in Belgium. He is of
+          Dutch nationality and has made a name for himself as one of the most
+          talented Formula 1 drivers in the world. Max is known for his
+          aggressive driving style and exceptional racing skills.
+        </p>
+      </section>
+      <hr />
+      <section class="education">
+        <h2>Education</h2>
+        <p>
+          Max completed his high school education at G.Onvanschool in Belgium in
+          2015. During his youth, he showed great interest in motorsports and
+          participated in various racing academies, where he received
+          specialized training in advanced racing techniques and performance
+          optimization.
+        </p>
+      </section>
+      <hr />
+      <section class="work-expirience">
+        <h2>Work experience</h2>
+        <ul class="job">
+          <li>
+            Karting (2005 - 2013)
+            <ul class="duty">
+              <li>
+                Started at age 4. Achieved championships in various series
+                including WSK Euro Series.
+              </li>
+              <li>2005 - 2-nd place in Limburgs Kart Championship</li>
+              <li>
+                1-st place - Rotax Max Challenge Belgium (2006, 2007, 2008)
+              </li>
+            </ul>
+          </li>
+          <li>
+            Formula 3
+            <ul class="duty">
+              <li>16 podiums</li>
+              <li>3-rd place in championship 2014</li>
+            </ul>
+          </li>
+          <li>
+            Formula 1
+            <ul class="duty">
+              <li>5 times world-champion</li>
+              <li>47 pole-position</li>
+              <li>124 podium</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section class="skills">
+        <h2>Skills</h2>
+        <p>
+          Exceptional driving skills, strong analytical capabilities, effective
+          communication with engineers, thriving in high-pressure situations.
+        </p>
+      </section>
+      <hr />
+      <section class="contacts">
+        <h2>Contacts</h2>
+        <nav>
+          <div>
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 10 0z"
+              />
+            </svg>
+            <a href="https://github.com/mavylow/Module_2"> max_verstappen</a>
+          </div>
+          <div>
+            <svg
+              width="20px"
+              height="20px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 18L9 12M20 18L15 12M3 8L10.225 12.8166C10.8665 13.2443 11.1872 13.4582 11.5339 13.5412C11.8403 13.6147 12.1597 13.6147 12.4661 13.5412C12.8128 13.4582 13.1335 13.2443 13.775 12.8166L21 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <a href="mailto:sofa.majseenko@gmail.com">
+              max.verstappen@gmail.com</a
+            >
+          </div>
+          <div>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                stroke="#0F0F0F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <a href="tel:+375444672612"> call me maybe</a>
+          </div>
+          <div>
+            <svg
+              width="20px"
+              height="20px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z"
+                fill="#000000"
+              />
+            </svg>
+            <a href="https://www.instagram.com/maxverstappen1/">
+              maxverstappen1</a
+            >
+          </div>
+        </nav>
+      </section>
+    </main>
+    <footer>
+      <img src="assets/img/car.png " height="50px" alt="redbull-car" /><span
+        >&copy; 2025 Max Verstappen</span
+      >
+    </footer>
+  </body>
+</html>
