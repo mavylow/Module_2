@@ -24,7 +24,7 @@ header {
 nav {
   align-self: center;
 }
-nav > ul {
+.desktop > ul {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -110,7 +110,7 @@ footer {
   display: none;
   position: relative;
 }
-.menu ul {
+.menu .mobile {
   visibility: hidden;
   position: absolute;
   z-index: 5;
@@ -120,6 +120,7 @@ footer {
   margin: 0;
   padding: 0;
   font-size: 1em;
+  top: 3em;
 }
 svg {
   z-index: 1;
@@ -131,13 +132,15 @@ input {
   z-index: 2;
   opacity: 0;
 }
-.menu input:checked ~ ul {
+.menu input:checked ~ .mobile {
   opacity: 1;
   visibility: visible;
 }
-.menu input:checked ~ ul > li {
+.menu input:checked ~ .mobile > ul {
   width: fit-content;
-  padding: 10px 20px;
+}
+.mobile ul > li {
+  padding: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -158,13 +161,13 @@ input {
   .page {
     grid-column: 1 / -1;
   }
-  nav {
+  .desktop {
     display: none;
   }
   .menu {
     display: block;
   }
-  .menu input:checked ~ ul {
+  .menu input:checked ~ .mobile {
     display: block;
   }
   aside {
