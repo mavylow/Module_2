@@ -1,0 +1,165 @@
+:root {
+  --base-bg-gradient: linear-gradient(89deg, #201c29, #5635f69e);
+  --hover-bg-gradient: linear-gradient(89deg, #201c29, #f635d39e);
+  --half-bg-gradient: linear-gradient(89deg, #201c29, #aa46dc9e);
+  --base-btn-color: #7768bf;
+  --hover-btn-color: #cd71cb;
+  --card-shadow: rgb(156, 173, 179);
+  --main-text-color: rgb(71, 71, 71);
+  --description-text-color: rgb(114, 114, 114);
+}
+body {
+  max-width: 1240px;
+  margin: 2em auto;
+  border-radius: 2em;
+  width: 100%;
+  height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: fit-content;
+  padding: 1em;
+  margin: 1em;
+  box-sizing: content-box;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.card {
+  animation: 2s ease-in-out fade-in;
+  width: 400px;
+  height: 566px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px var(--card-shadow);
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--base-bg-gradient);
+  transition: transform 2s, background 2s;
+}
+.card:hover {
+  transform: scale(1.1) translate(100px, 100px);
+  opacity: 80%;
+  background: var(--hover-bg-gradient);
+}
+.card:active {
+  transform: rotate(10deg) scale(1.2) skewX(10deg);
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.img-container > img {
+  opacity: 0;
+  animation: 2s ease-in-out smooth-appear 2s forwards;
+  width: 80%;
+  align-self: flex-start;
+}
+.heart {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  margin: 1.5em;
+  padding: 0.8em;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  right: 0;
+  top: 0;
+}
+.heart img {
+  align-self: center;
+  width: 90%;
+}
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45%;
+  border-radius: 2em;
+  background-color: white;
+  padding: 1.2em 1.2em;
+}
+.text-container h2 {
+  margin: 0;
+  padding: 0.3em 0;
+  font-size: 1.8em;
+  color: var(--main-text-color);
+}
+.text-container p {
+  margin: 0;
+  padding: 0.5em 0;
+  font-size: 1.2em;
+  width: 90%;
+  color: var(--description-text-color);
+}
+.price-container {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price-container button {
+  font-size: 1.5em;
+  width: 60%;
+  height: 2em;
+  background-color: var(--base-btn-color);
+  border: none;
+  color: white;
+  border-radius: 0.5em;
+  font-weight: 600;
+  align-self: flex-end;
+  transition: background-color 2s;
+}
+.card:hover button {
+  background-color: var(--hover-btn-color);
+}
+
+.price-container p {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+.price-container h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+.price-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--main-text-color);
+}
+@keyframes fade-in {
+  from {
+    transform: scale(0) rotate(-20deg);
+    background: var(--hover-bg-gradient);
+  }
+  50% {
+    background: var(--half-bg-gradient);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    background: var(--base-bg-gradient);
+  }
+}
+
+@keyframes smooth-appear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
